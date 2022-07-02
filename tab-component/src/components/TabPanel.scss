@@ -1,0 +1,10 @@
+.tabPanel {
+  min-width: 300px;
+  min-height: 200px;
+  display: block;
+  border: 1px solid #000;
+  padding: 8px;
+  &.hidden {
+    display: none;
+  }
+}

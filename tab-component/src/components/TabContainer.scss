@@ -1,0 +1,13 @@
+.tabContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.tabHeader {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  border-bottom: 1px solid #000;
+  transform: translateY(1px);
+}
