@@ -1,0 +1,12 @@
+.newsItem {
+  padding: 8px;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 4px;
+  background-color: azure;
+  &.darkTheme {
+    border: 1px solid #fff;
+    background-color: black;
+    color: white;
+  }
+}

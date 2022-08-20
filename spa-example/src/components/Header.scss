@@ -1,0 +1,132 @@
+@import 'variables';
+
+.header {
+  display: flex;
+  padding: 8px;
+  flex-direction: row;
+  height: 60px;
+  width: 100%;
+  background-color: lightblue;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  color: #000;
+
+  .info {
+    order: 1;
+  }
+
+  .searchBox {
+    order: 2;
+    min-width: 140px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-grow: 0;
+    justify-content: space-between;
+
+    .searchTerm {
+      width: 200px;
+      height: 40px;
+      padding: 0px 8px;
+      border-radius: 4px 0px 0px 4px;
+      border: 1px;
+      transition: width .2s;
+
+      &:focus {
+        width: 200px;
+        outline: transparent;
+        box-shadow: 0 0 0 1px cornflowerblue inset;
+        height: 40px;
+
+        &+.searchButton {
+          opacity: 1;
+        }
+      }
+    }
+
+    .searchButton {
+      height: 40px;
+      width: 40px;
+      border-radius: 0px 4px 4px 0px;
+      border: 0px;
+      cursor: pointer;
+      background-color: blue;
+      opacity: .6;
+    }
+  }
+
+  .menu {
+    order: 3;
+    cursor: pointer;
+    svg {
+      path {
+        fill: #000;
+      }
+    }
+  }
+
+  &.darkTheme {
+    background-color: darkslateblue;
+    color: #fff;
+    .searchBox {
+      .searchTerm {
+        background-color: #000;
+        color: #fff;
+      }
+      .searchButton {
+        background-color: darkblue;
+      }
+    }
+    .menu {
+      order: 3;
+      cursor: pointer;
+      svg {
+        path {
+          fill: #fff;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: $TABLET_WIDTH) {
+  .header {
+
+    .info {
+      order: 2;
+    }
+
+    .searchBox {
+      order: 1;
+      .searchTerm {
+        width: 100px;
+      }
+    }
+
+    .menu {
+      order: 3;
+    }
+  }
+}
+@media screen and (max-width: $MOBILE_WIDTH) {
+  .header {
+
+    .info {
+      display: none;
+    }
+
+    .searchBox {
+      flex-grow: 1;
+
+      .searchTerm {
+        flex-grow: 1;
+        width: auto;
+
+        &:focus {
+          width: auto;
+        }
+      }
+    }
+  }
+}

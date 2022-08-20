@@ -1,0 +1,17 @@
+.newsList {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  width: 100%;
+  height: 100%;
+  background-color: #eee;
+  color: black;
+  gap: 16px;
+}
+
+.darkTheme {
+  .newsList {
+    background-color: black;
+    color: white;
+  }
+}
